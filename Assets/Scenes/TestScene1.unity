@@ -3368,8 +3368,31 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!70 &560768815
-CapsuleCollider2D:
+--- !u!4 &560768818 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5752502856800732427, guid: f5eb9852b763a9c43832123df5822a2a, type: 3}
+  m_PrefabInstance: {fileID: 5689785373002402692}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &560768819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 560768810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ef02c121e9e19c4a980a06fadd21bba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerHorizontalSpeed: 7
+  PlayerVerticalSpeed: 6
+  flyHack: 0
+  jumpableGround:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!61 &560768820
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3400,30 +3423,19 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13580155, y: -0.1474683}
-  m_Size: {x: 0.8110938, y: 2.2925282}
-  m_Direction: 0
---- !u!4 &560768818 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5752502856800732427, guid: f5eb9852b763a9c43832123df5822a2a, type: 3}
-  m_PrefabInstance: {fileID: 5689785373002402692}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &560768819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 560768810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ef02c121e9e19c4a980a06fadd21bba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flyHack: 0
-  jumpableGround:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  m_Offset: {x: 0.173213, y: -0.48633832}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.9375, y: 2.5625}
+    newSize: {x: 2.9375, y: 2.5625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.75996685, y: 1.5556012}
+  m_EdgeRadius: 0
 --- !u!1 &797090981
 GameObject:
   m_ObjectHideFlags: 0
@@ -13505,10 +13517,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 8019896238246755939, guid: f5eb9852b763a9c43832123df5822a2a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 560768815}
+      addedObject: {fileID: 560768814}
     - targetCorrespondingSourceObject: {fileID: 8019896238246755939, guid: f5eb9852b763a9c43832123df5822a2a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 560768814}
+      addedObject: {fileID: 560768820}
     - targetCorrespondingSourceObject: {fileID: 8019896238246755939, guid: f5eb9852b763a9c43832123df5822a2a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 560768819}
