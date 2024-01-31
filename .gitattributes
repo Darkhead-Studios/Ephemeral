@@ -1,0 +1,7 @@
+# .gitattributes
+
+# Ignore ShaderLab files
+*.shaderlab binary
+
+# Ignore HLSL files
+*.hlsl binary
