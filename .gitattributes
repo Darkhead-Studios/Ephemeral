@@ -1,5 +1,5 @@
-*.shader binary
-*.cginc binary
-*.hlsl binary
-*.compute binary
-*.meta binary
+*.shader linguist-generated=false
+*.cginc linguist-generated=false
+*.hlsl linguist-generated=false
+*.compute linguist-generated=false
+*.meta linguist-generated=false
