@@ -5,25 +5,42 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float PlayerHorizontalSpeed = 7f;
-    public float PlayerVerticalSpeed = 7f;
+    public float PlayerVerticalSpeed   = 7f;
     public bool flyHack = false;
 
-    private Rigidbody2D rb;
-    private BoxCollider2D coll;
+    private Rigidbody2D    rb;
+    private BoxCollider2D  coll;
     private SpriteRenderer sp;
-    private Animator animator; // Added Animator reference
+    private Animator       animator;
 
     [SerializeField] private LayerMask jumpableGround;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        coll = GetComponent<BoxCollider2D>();
-        sp = GetComponent<SpriteRenderer>();
-        animator = GetComponent<Animator>(); // Get the Animator component
+        rb       = GetComponent<Rigidbody2D>();
+        coll     = GetComponent<BoxCollider2D>();
+        sp       = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
+    {
+        HorizontalMovement();
+        VerticalMovement();
+
+        
+    }
+
+    void FixedUpdate()
+    {
+        // Handle wall collisions
+        HandleWallCollisions();
+        rb.AddForce(Vector3.down * 6);
+
+    }
+
+
+    private void HorizontalMovement()
     {
         // Horizontal Movement
         float dirX = Input.GetAxis("Horizontal");
@@ -59,20 +76,30 @@ public class PlayerMovement : MonoBehaviour
             animator.SetTrigger("StopRunning");
         }
 
+
+
         // Check if the StartRunning trigger is active and the player is not moving
+
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Player_Idle") &&
-            animator.IsInTransition(0) && animator.GetAnimatorTransitionInfo(0).IsName("AnyState -> Player_Start_Running"))
+            animator.IsInTransition(0) && 
+            animator.GetAnimatorTransitionInfo(0).IsName("AnyState -> Player_Start_Running"))
         {
             // Reset the StartRunning trigger to return to the idle animation
             animator.ResetTrigger("StartRunning");
         }
+       
+       
+    }
 
+    private void VerticalMovement()
+    {
         // Vertical Movement
         if (!flyHack)
         {
             if (Input.GetButtonDown("Jump") && IsGrounded())
             {
                 rb.velocity = new Vector2(rb.velocity.x, PlayerVerticalSpeed);
+                PlayerVerticalSpeed += .005f;
 
                 // Trigger the start running animation when jumping
                 animator.SetTrigger("StartRunning");
@@ -83,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButton("Jump"))
             {
                 rb.velocity = new Vector2(rb.velocity.x, PlayerVerticalSpeed);
+                PlayerVerticalSpeed += .005f;
 
                 // Trigger the start running animation when jumping
                 animator.SetTrigger("StartRunning");
@@ -90,11 +118,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
-        // Handle wall collisions
-        HandleWallCollisions();
-    }
+
+
 
     private void HandleWallCollisions()
     {
