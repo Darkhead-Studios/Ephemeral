@@ -1,5 +1,5 @@
-*.shader linguist-generated=false
-*.cginc linguist-generated=false
-*.hlsl linguist-generated=false
-*.compute linguist-generated=false
-*.meta linguist-generated=false
+*.shader linguist-vendored
+*.cginc linguist-vendored
+*.hlsl linguist-vendored
+*.compute linguist-vendored
+*.meta linguist-vendored
