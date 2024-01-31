@@ -1,7 +1,9 @@
-# .gitattributes
+* -text
 
-# Ignore ShaderLab files
-*.shaderlab binary
+*.cs        text eol=lf diff=csharp
+*.shader    text eol=lf
+*.cginc     text eol=lf
+*.hlsl      text eol=lf
+*.compute   text eol=lf
 
-# Ignore HLSL files
-*.hlsl binary
+*.meta      text eol=lf
