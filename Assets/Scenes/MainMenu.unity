@@ -356,7 +356,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6509434, g: 0.6358603, b: 0.635591, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.8509804, g: 0.8039216, b: 0.54509807, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.8509804, g: 0.8039216, b: 0.54509807, a: 1}
@@ -424,13 +424,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7555e8582b348c74e936faf25add0cc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textMeshProComponent: {fileID: 79763656}
-  originalFontSize: 0
-  originalColor:
-    r: 0
-    g: 0
-    b: 0
-    a: 0
 --- !u!1 &202446420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1321,7 +1314,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6509804, g: 0.6392157, b: 0.6392157, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.8509804, g: 0.8039216, b: 0.54509807, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.8509804, g: 0.8039216, b: 0.54509807, a: 1}
@@ -1764,7 +1757,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6509804, g: 0.6392157, b: 0.6392157, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.8509804, g: 0.8039216, b: 0.54509807, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.8509804, g: 0.8039216, b: 0.54509807, a: 1}
@@ -2277,7 +2270,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.6509804, g: 0.6392157, b: 0.6392157, a: 1}
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.8509804, g: 0.8039216, b: 0.54509807, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.8509804, g: 0.8039216, b: 0.54509807, a: 1}
