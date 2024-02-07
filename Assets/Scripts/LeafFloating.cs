@@ -7,18 +7,16 @@ public class LeafFloating : MonoBehaviour
 {
 
     public float wind = 1f;
-    public GameObject player;
+    public GameObject PlayerPrefab;
 
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     { 
-        transform.position = new Vector3(transform.position.x + wind * Time.deltaTime, transform.position.y, transform.position.z);
-        if (transform.position.y < player.transform.position.y - 10) Destroy(gameObject);
-   
+        transform.position = new Vector3(transform.position.x + Random.Range((float)(wind - 0.2), wind) * Time.deltaTime, transform.position.y, transform.position.z);
+        if (transform.position.y < PlayerPrefab.transform.position.y - 10 ||
+            transform.position.y > PlayerPrefab.transform.position.y + 20 ||
+            transform.position.x > PlayerPrefab.transform.position.x + 13 ||
+            transform.position.x < PlayerPrefab.transform.position.x - 13) 
+            Destroy(gameObject);
+ 
     }
 }

@@ -99,10 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f68dd60acfc6f0418b81914269b06cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gravity: 9.79
   wind: 0.59
-  timer: 0
-  player: {fileID: 3666719727140625970, guid: 0d5140787ab8d4a45bd776ac8aeba300, type: 3}
+  PlayerPrefab: {fileID: 3666719727140625970, guid: 0d5140787ab8d4a45bd776ac8aeba300, type: 3}
 --- !u!50 &3698824878008580711
 Rigidbody2D:
   serializedVersion: 4

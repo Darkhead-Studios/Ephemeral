@@ -1,29 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class LeafGenerator : MonoBehaviour
 {
     private float counter = 0;
-    public int timer = 5;
-    public GameObject leaf;
+
+    public int timer = 1;
+    public GameObject LeafPrefab;
+    public GameObject PlayerPrefab;
 
     void Start()
     {
         GenerateLeaf();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (counter < timer) counter += Time.deltaTime;
-        else
+        if (!(transform.position.y < PlayerPrefab.transform.position.y - 15 ||
+            transform.position.y > PlayerPrefab.transform.position.y + 25 ||
+            transform.position.x > PlayerPrefab.transform.position.x + 15 ||
+            transform.position.x < PlayerPrefab.transform.position.x - 15))
         {
-            counter = 0;
-            GenerateLeaf();
+            if (counter < timer) counter += Time.deltaTime;
+            else
+            {
+                counter = 0;
+                GenerateLeaf();
+            }
         }
         
     }
+        
 
     void GenerateLeaf()
     {
@@ -31,6 +40,6 @@ public class LeafGenerator : MonoBehaviour
             transform.position.x + Random.Range(-3, 3),
             transform.position.y + Random.Range(0, 3), 
             transform.position.z);
-        Instantiate(leaf, spawn, transform.rotation);
+        Instantiate(LeafPrefab, spawn, transform.rotation);
     }
 }

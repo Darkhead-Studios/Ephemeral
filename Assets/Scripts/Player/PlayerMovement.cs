@@ -28,6 +28,8 @@ public class PlayerMovement : MonoBehaviour
         HorizontalMovement();
         VerticalMovement();
 
+        if (transform.position.y < -15)
+            transform.position = new Vector3(0, 0, 0);
         
     }
 

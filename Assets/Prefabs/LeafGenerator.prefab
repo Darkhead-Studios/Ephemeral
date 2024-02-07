@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634aed89149c2dd4e8adaf817bb7f0fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 6
-  leaf: {fileID: 2311806375228085634, guid: 7978fc3604d49df439260a94b0c493ce, type: 3}
+  timer: 1
+  LeafPrefab: {fileID: 2311806375228085634, guid: 7978fc3604d49df439260a94b0c493ce, type: 3}
+  PlayerPrefab: {fileID: 3666719727140625970, guid: 0d5140787ab8d4a45bd776ac8aeba300, type: 3}
